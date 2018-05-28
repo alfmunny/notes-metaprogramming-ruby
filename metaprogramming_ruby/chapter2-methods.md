@@ -4,9 +4,8 @@
 
 use `send`
 
-```
+```ruby
 obj.send(:my_method, 3)
-
 ```
 
 Symbols are preferred to use in send function.
@@ -81,7 +80,7 @@ end
 
 Advanced Version
 
-```
+```ruby
 class Computer 
     def initialize(computer_id, data_source)
         @id = computer_id
