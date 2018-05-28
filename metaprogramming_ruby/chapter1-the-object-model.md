@@ -26,21 +26,18 @@ You can always add method to a class by reopening the class. **Monkeypatch**
 if the method already exists, you will have a error.
 To avoid the 
 
-
-
 ## What's in an Object
 
 ### Instance Variable
 
-```
+```ruby
 obj.instance_variables
 obj.instance_variable_set("@x", 1)
 ```
 
 ### Methods
 
-```
-```
+```ruby
 [].methods
 
 [].methods.grep /^re/ # => [:replace, :reject, :reject!, .....
@@ -56,7 +53,7 @@ An object's methods lives in the object's class.
 
 ## Class is Object
 
-```
+```ruby
 "hello".class   # => String
 "String".class  # => Class
 
@@ -77,7 +74,7 @@ Uppercased references are constants
 
 Class name is a constants
 
-```
+```ruby
 module MyModule
 
     MyConstants = 'Outer constants'
@@ -121,7 +118,7 @@ D.ancestors         # => [D, C, M, Object, Kernel, BasicObject]
 
 ## The Kernel
 Kernel is a module. The class Object includes the Kernel.
-```
+```ruby
 Kernel.private_instance_methods.grep(/^pr/) # => [:printf, :print, :proc]
 ```
 
@@ -129,7 +126,7 @@ Kernel.private_instance_methods.grep(/^pr/) # => [:printf, :print, :proc]
 
 Ervery time a class includes a module, the module is inserted in ancestors chain right above the class itself.
 
-```
+```ruby
 class Book
     include Printable
     include Document
@@ -142,12 +139,4 @@ Book.ancestors # => [Book, Document, Printable, Object, Kernel, BasicObject]
 ## Private
 
 Private methods can only called without explicit receiver (without `self`)
-
-
-
-
-
-
-
-
 
