@@ -114,4 +114,47 @@ Because of unwelcome surprises like the one shown above, most Rubyist nowadays s
 Ruby allows you to add a method to a single object.
 
 ```ruby
+str = "just a regular string"
+def str.title?
+    self.upcase == self
+end
+
+str.title? # => false
+str.methods.grep(/title?/) # => ["title?"]
+str.singleton_methods # => ["title?"]
+```
+
+Class methods is only singleton method on a class.
+
+```ruby
+def obj.a_singleton_method; end
+def MyClass.another_class_method; end
+```
+
+## Class Macro
+
+Ruby objects don't have attributes.
+
+You have to define two Mimic Methods
+
+```ruby
+class MyClass
+    def my_attribute=(value)
+        @my_attribute = value
+    end
+
+    def my_attribute
+        @my_attribute
+    end
+end
+```
+As an alternative, you can generate accessors by using one of the methods in the `Module#attr_*()` fammily.
+
+* `Module#attr_reader()` generates the reader
+* `Module#attr_writer()` generates the writer
+* `Module#attr_accessor()` generates both
+```ruby
+class MyClass
+    attr_accessor :my_attribute
+end
 ```
