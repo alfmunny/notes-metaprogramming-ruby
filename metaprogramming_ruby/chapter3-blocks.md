@@ -16,7 +16,7 @@ a_method(1, 2) { |x, y| (x, y) * 3 } => 10
 
 ```ruby
 def a_method
-    ret yield if block_given?
+    return yield if block_given?
     'no block'
 end
 
