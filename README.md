@@ -8,3 +8,4 @@
 
     3. [Blocks](https://github.com/alfmunny/notes-metaprogramming-ruby/blob/master/metaprogramming_ruby/chapter3-blocks.md) 
     4. [Class Definitions](https://github.com/alfmunny/notes-metaprogramming-ruby/blob/master/metaprogramming_ruby/chapter4-class-definitions.md) 
+    4. [Code writes Code](https://github.com/alfmunny/notes-metaprogramming-ruby/blob/master/metaprogramming_ruby/chapter5-code-that-writes-code.md) 
